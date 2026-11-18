@@ -1,0 +1,31 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Secrets and machine-local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Reproducible downloads and large raw runs
+downloads/
+runs/
+outputs/
+checkpoints/
+wandb/
+tensorboard/
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store

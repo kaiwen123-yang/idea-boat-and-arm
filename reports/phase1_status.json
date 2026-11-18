@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.1.0",
+  "updated_date": "2026-11-18",
+  "phase": "P1",
+  "overall_status": "NOT_RUN",
+  "repository_stage": "DESIGN_AND_TASK_BOOTSTRAP",
+  "implementation_state": "NOT_STARTED",
+  "simulation_run": false,
+  "active_physical_configuration": null,
+  "formal_piper_asset_bound": false,
+  "tests": [
+    {
+      "id": "P1-01",
+      "name": "静水漂浮与加载",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-02",
+      "name": "恢复与自由衰减",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-03",
+      "name": "船臂反作用",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-04",
+      "name": "推进器作用",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-05",
+      "name": "共同波场响应",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-06",
+      "name": "接触与负载转移",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-07",
+      "name": "步长与保存恢复",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    },
+    {
+      "id": "P1-08",
+      "name": "腕部RGB与原生深度",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "code_commit": null,
+      "config_hash": null,
+      "evidence": [],
+      "note": "Design only; no physical or rendering run."
+    }
+  ],
+  "next_task": "PHASE1_TASKS task A: environment and versioned Piper asset audit, then static marine physics.",
+  "note": "Bootstrap arithmetic checks never promote physical tests to PASS."
+}

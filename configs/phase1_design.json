@@ -1,0 +1,243 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DESIGN_ONLY",
+  "date": "2026-11-18",
+  "unit_system": "SI",
+  "convention": {
+    "world_axes": "x forward initially, y left initially, z up",
+    "boat_origin": "midpoint of pontoon geometric centers",
+    "quaternion_order": "wxyz",
+    "transform_notation": "T_AB maps points in B to A"
+  },
+  "priorities": {
+    "effectiveness_first": true,
+    "extensive_random_action_baseline_required": true,
+    "final_particle_fluid_required": true,
+    "p1_learning_training": false,
+    "p1_rgb_interface_required": true,
+    "p1_native_depth_interface_required": true
+  },
+  "backend": {
+    "initial": "MuJoCo CPU",
+    "version": null,
+    "integrator": "implicitfast",
+    "physics_dt_s": 0.002,
+    "convergence_dt_s": 0.001,
+    "control_period_s": 0.02,
+    "native_fluid_density": 0,
+    "native_fluid_viscosity": 0,
+    "body_gravcomp": 0,
+    "sleeping": false,
+    "artificial_delays_s": 0
+  },
+  "environment": {
+    "water_density_kg_m3": 1000,
+    "gravity_m_s2": 9.81,
+    "still_water_z_m": 0,
+    "source": "design_assumption"
+  },
+  "hull": {
+    "pontoon_size_m": [
+      1.4,
+      0.18,
+      0.3
+    ],
+    "pontoon_centers_B_m": [
+      [
+        0,
+        0.3,
+        0
+      ],
+      [
+        0,
+        -0.3,
+        0
+      ]
+    ],
+    "base_mass_excluding_arm_camera_kg": 60,
+    "base_inertia_kg_m2": null,
+    "base_com_B_m": null,
+    "source": "design_assumption"
+  },
+  "hardware_target": {
+    "arm_family": "Piper",
+    "exact_variant": null,
+    "prior_project_reference_variant": "Piper H",
+    "provenance": "User selected Piper in this conversation; named-project hardware context retrieved on 2026-11-18. No independent raw hardware-file audit.",
+    "end_effector": "official_parallel_gripper",
+    "asset_repository_candidate": "https://github.com/agilexrobotics/agx_arm_urdf",
+    "asset_commit": null,
+    "asset_path": null,
+    "asset_license_verified_for_import": false,
+    "arm_and_gripper_mass_kg": null,
+    "link_inertias_and_joint_limits": null,
+    "gripper_clear_opening_m": null,
+    "reach_m": null,
+    "rated_payload_kg": null,
+    "mount_B_m": [
+      0.25,
+      0,
+      0.18
+    ],
+    "mount_source": "design_assumption",
+    "new_project_final_hardware_confirmed": false
+  },
+  "camera": {
+    "selected_model": "Orbbec DaBai DC1",
+    "count": 1,
+    "location": "wrist, fixed tool/gripper housing, not moving finger",
+    "provenance": "authorized_project_conversation_record_not_raw_file_verification",
+    "rgb": {
+      "width": 640,
+      "height": 480,
+      "reported_rate_hz": 30,
+      "simulation_rate_hz": 30,
+      "actual_K": null,
+      "actual_D": null
+    },
+    "depth": {
+      "width": 640,
+      "height": 400,
+      "reported_storage_unit": "millimeter",
+      "scale_m_per_reported_unit": 0.001,
+      "native_aligned_to_rgb": false,
+      "measured_rate_hz": null,
+      "simulation_rate_hz": 30,
+      "actual_K": null,
+      "actual_D": null,
+      "depth_definition_verified": false
+    },
+    "actual_T_tool_rgb": null,
+    "actual_T_rgb_depth": null,
+    "hand_eye_verified": false,
+    "dynamic_time_alignment_verified": false,
+    "measured_assembly_mass_kg": null,
+    "measured_assembly_inertia_kg_m2": null,
+    "simulation_assumptions": {
+      "assembly_mass_kg": 0.15,
+      "rgb_vertical_fov_deg": 60,
+      "depth_vertical_fov_deg": 60,
+      "lens_distortion": "ideal_zero",
+      "nominal_T_tool_rgb": null,
+      "nominal_T_rgb_depth": null,
+      "hardware_calibrated": false,
+      "depth_validity_model": "ideal_geometry_only"
+    },
+    "sampling": {
+      "clock": "simulation_time",
+      "first_frame_sim_time_s": 0,
+      "schedule": "absolute n/fps, acquire at first physical step at or after target",
+      "save_target_and_actual_times": true
+    }
+  },
+  "reference_proxy": {
+    "purpose": "analytical diagnostic only; not Piper hardware specifications or formal Piper scene",
+    "arm_and_gripper_mass_kg": 12,
+    "nominal_arm_reach_m": 0.75,
+    "gripper_clear_opening_m": 0.14,
+    "camera_assembly_mass_kg": 0.15,
+    "target": {
+      "size_m": [
+        0.18,
+        0.1,
+        0.06
+      ],
+      "density_kg_m3": 900,
+      "friction_coefficient": 0.5,
+      "source": "design_assumption_rigid_block_not_measured_ice"
+    },
+    "target_candidate_xy_W_m": [
+      0.85,
+      0
+    ],
+    "calibration_payload_kg": 5
+  },
+  "formal_scene": {
+    "status": "ASSET_BINDING_REQUIRED",
+    "total_platform_mass_kg": null,
+    "equilibrium_initial_pose": null,
+    "target_size_m": null,
+    "target_density_kg_m3": 900,
+    "target_start_pose_W": null,
+    "target_payload_and_grip_fit_verified": false,
+    "ik_and_collision_verified": false,
+    "rule": "Derive from chosen versioned Piper asset; choose fitting target and reachable pose. Retain separate proxy results."
+  },
+  "thrusters": {
+    "positions_B_m": [
+      [
+        -0.55,
+        0.3,
+        -0.07
+      ],
+      [
+        -0.55,
+        -0.3,
+        -0.07
+      ]
+    ],
+    "directions_B": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "force_limits_N": [
+      -30,
+      30
+    ],
+    "source": "design_assumption"
+  },
+  "marine": {
+    "buoyancy": "geometric submerged volume and first moment",
+    "damping_model": "relative-flow dissipative load",
+    "damping_coefficients": null,
+    "damping_source": "to_be_chosen_and_logged_not_identified",
+    "added_mass": false,
+    "radiation_memory": false,
+    "wave_model": "prescribed_deep_water_linear_field_approximation",
+    "wave_direction_convention": "propagation direction, counterclockwise from world +x; eta=A*cos(k dot x - omega*t + phase)",
+    "wave_cases": [
+      {
+        "name": "calm",
+        "amplitude_m": 0,
+        "period_s": 2.5,
+        "direction_deg": 0,
+        "phase_rad": 0
+      },
+      {
+        "name": "along_length",
+        "amplitude_m": 0.01,
+        "period_s": 2.5,
+        "direction_deg": 0,
+        "phase_rad": 0
+      },
+      {
+        "name": "along_width",
+        "amplitude_m": 0.01,
+        "period_s": 2.5,
+        "direction_deg": 90,
+        "phase_rad": 0
+      }
+    ]
+  },
+  "acceptance_design_targets": {
+    "symmetric_static_draft_abs_error_m": 0.0001,
+    "static_force_relative_residual": 0.001,
+    "small_signal_stiffness_relative_error": 0.05,
+    "quasistatic_target_force_relative_residual": 0.1,
+    "dt_continuous_metrics_relative_change": 0.05,
+    "thresholds_are_literature_standards": false
+  },
+  "evidence": {
+    "physical_tests_run": false,
+    "hardware_validated": false,
+    "particle_fluid_implemented": false
+  }
+}
